@@ -24,8 +24,13 @@ const server = http.createServer((request, response)=>{
 
 	fs.readFile(resourceName, (err, data)=>{
 		if(err){
-			response.writeHead(404, {'Content-Type' : contentType});
-			response.end('404. Resource not found.');
+			fs.readFile('./not_found.html', (err, _data)=>{
+				if(err) throw err;
+				
+				response.writeHead(404, {'Content-Type' : contentType});
+				response.end(_data, 'utf-8');
+			});
+			
 			return;
 		}
 

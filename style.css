@@ -1,0 +1,189 @@
+@font-face {
+	font-family: Roboto-Hamburgabana;
+	src: url('./tipografias/roboto/Roboto-Light.ttf');
+}
+
+@font-face {
+	font-family: Roboto-Hamburgabana-Titulo;
+	src: url('./tipografias/roboto/Roboto-Regular.ttf');
+}
+
+#root{
+	--font-color: #100c10dd;
+	--font-color-2: #180d3fdd;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	min-width: 0;
+
+	font-family: Roboto-Hamburgabana;
+	font-size: calc(32px / 1.618);
+	text-shadow: 0 1px 2px #00000055;
+	color: var(--font-color);
+}
+
+html, body{
+	height: 100vh;
+	background-color: #f8f8f8;
+}
+
+body{
+	overflow-y: scroll;
+}
+
+a, a:link, a:visited{
+	text-decoration: none;
+	color: inherit;
+}
+
+li{
+	list-style: none;
+}
+
+h1, h2, h3{
+	font-family: Roboto-Hamburgabana-Titulo;
+}
+
+body > header{
+	position: sticky;
+	top: 0;
+	height: 128px;
+	box-shadow: 0 10px 15px -15px #00000055;
+}
+
+.logotipo{
+	position: absolute;
+	top: 0;
+	left: 50%;
+	translate: -50% 0;
+	width: min(320px, 95vw);
+	height: min(320px, 95vw);
+	background: url('./design/Hamburguesa_branding.png') no-repeat;
+	background-size: contain;
+	z-index: 5;
+}
+
+.menu-principal{
+	padding-inline: 32px;
+	background-color: #f8f8f8;
+}
+
+.menu-principal, .menu-principal>*{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 64px;
+	height: 100%;
+}
+
+.menu-principal ul :where(li, li a){
+	display: grid;
+	place-items: center;
+	height: 100%;
+	width: 200px;
+	font-size: 1.1em;
+}
+
+.menu-principal ul li:hover{
+	box-shadow: inset 0 -20px 30px -35px #0079bee1;
+	color: #0079bee1;
+	border-bottom-width: 3px;
+}
+
+.menu-principal ul li{
+	position: relative;
+}
+
+.menu-principal li.active::after{
+	content: '';
+	display: block;
+	width: 100%;
+	height: 2px;
+
+	position: absolute;
+	bottom: 0;
+
+	background-color: #0079bee1;
+}
+
+.menu-principal li.active:hover:after{
+	height: 3px;
+}
+
+main{
+	display: grid;
+	justify-content: center;
+	padding-top: 128px;
+	min-height: 500px;
+}
+
+.landing-top{
+	width: min(1000px, 100vw);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.landing-top > p{
+	flex: 1 0 400px;
+}
+
+.landing-top > figure{
+	flex: 1 0 600px;
+}
+
+body > footer{
+	background: url('./design/footer-background-3.png') no-repeat;
+	background-size: cover;
+	box-shadow: inset 0 0 25px #000000aa;
+	min-height: 256px;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 16px 32px;
+}
+
+.logotipo-footer{
+	background: url('./design/logotipo-footer-2.png') no-repeat;
+	background-size: cover;
+	filter: drop-shadow(0 0 10px #000000aa);
+	width: 512px;
+	height: 256px;
+}
+
+.menu-footer ul{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+
+	height: 100%;
+	padding-block: 32px;
+}
+
+.menu-footer ul:first-child{
+	border-bottom:1px solid #f8f8f8;
+}
+
+.menu-footer ul:last-child{
+	gap: 32px;
+}
+
+.menu-footer ul :where(li, li a){
+	display: grid;
+	place-items: center;
+	height: 100%;
+	color: #f8f8f8;
+	font-size: 1.1em;
+}
+
+.menu-footer ul li:hover a{
+	color: #33acf1e1;
+}
+
+.menu-footer ul.menu-abajo li:hover a{
+	color: #128bd0e1;
+}
