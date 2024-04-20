@@ -1,16 +1,27 @@
 @font-face {
-	font-family: Roboto-Hamburgabana;
+	font-family: Roboto-Hamburgabana-Menus;
 	src: url('./tipografias/roboto/Roboto-Light.ttf');
 }
 
 @font-face {
-	font-family: Roboto-Hamburgabana-Titulo;
+	font-family: Roboto-Hamburgabana-Parrafo;
 	src: url('./tipografias/roboto/Roboto-Regular.ttf');
 }
 
-#root{
+@font-face {
+	font-family: Roboto-Hamburgabana-Titulo;
+	src: url('./tipografias/roboto/Roboto-Black.ttf');
+}
+
+:root{
 	--font-color: #100c10dd;
 	--font-color-2: #180d3fdd;
+	--white: #f8f8f8;
+	--shadow-1: #00000055;
+	--shadow-2: #000000aa;
+	--celeste: #0079bee1;
+	--celeste-2: #00599ee1;
+	--celeste-3: #10bbcc;
 }
 
 *{
@@ -19,15 +30,16 @@
 	box-sizing: border-box;
 	min-width: 0;
 
-	font-family: Roboto-Hamburgabana;
+	font-family: Roboto-Hamburgabana-Parrafo;
 	font-size: calc(32px / 1.618);
-	text-shadow: 0 1px 2px #00000055;
+	text-shadow: 0 0 2px var(--shadow-1);
 	color: var(--font-color);
 }
 
 html, body{
-	height: 100vh;
-	background-color: #f8f8f8;
+	min-height: 100vh;
+	height: max-content;
+	background-color: var(--white);
 }
 
 body{
@@ -43,15 +55,22 @@ li{
 	list-style: none;
 }
 
-h1, h2, h3{
+h1{
 	font-family: Roboto-Hamburgabana-Titulo;
+}
+
+p{
+	white-space: normal;
 }
 
 body > header{
 	position: sticky;
 	top: 0;
+	left: 0;
+	width: 100%;
 	height: 128px;
-	box-shadow: 0 10px 15px -15px #00000055;
+	box-shadow: 0 10px 15px -15px var(--shadow-1);
+	z-index: 5;
 }
 
 .logotipo{
@@ -63,12 +82,12 @@ body > header{
 	height: min(320px, 95vw);
 	background: url('./design/Hamburguesa_branding.png') no-repeat;
 	background-size: contain;
-	z-index: 5;
+	z-index: 10;
 }
 
 .menu-principal{
 	padding-inline: 32px;
-	background-color: #f8f8f8;
+	background-color: var(--white);
 }
 
 .menu-principal, .menu-principal>*{
@@ -84,12 +103,13 @@ body > header{
 	place-items: center;
 	height: 100%;
 	width: 200px;
-	font-size: 1.1em;
+	font-size: 1.13em;
+	font-family: Roboto-Hamburgabana-Menus;
 }
 
 .menu-principal ul li:hover{
-	box-shadow: inset 0 -20px 30px -35px #0079bee1;
-	color: #0079bee1;
+	box-shadow: inset 0 -20px 30px -35px var(--celeste);
+	color: var(--celeste);
 	border-bottom-width: 3px;
 }
 
@@ -106,39 +126,17 @@ body > header{
 	position: absolute;
 	bottom: 0;
 
-	background-color: #0079bee1;
+	background-color: var(--celeste);
 }
 
 .menu-principal li.active:hover:after{
 	height: 3px;
 }
 
-main{
-	display: grid;
-	justify-content: center;
-	padding-top: 128px;
-	min-height: 500px;
-}
-
-.landing-top{
-	width: min(1000px, 100vw);
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-
-.landing-top > p{
-	flex: 1 0 400px;
-}
-
-.landing-top > figure{
-	flex: 1 0 600px;
-}
-
 body > footer{
 	background: url('./design/footer-background-3.png') no-repeat;
 	background-size: cover;
-	box-shadow: inset 0 0 25px #000000aa;
+	box-shadow: inset 0 0 25px var(--shadow-2);
 	min-height: 256px;
 
 	display: flex;
@@ -150,7 +148,7 @@ body > footer{
 .logotipo-footer{
 	background: url('./design/logotipo-footer-2.png') no-repeat;
 	background-size: cover;
-	filter: drop-shadow(0 0 10px #000000aa);
+	filter: drop-shadow(0 0 10px var(--shadow-2));
 	width: 512px;
 	height: 256px;
 }
@@ -165,7 +163,7 @@ body > footer{
 }
 
 .menu-footer ul:first-child{
-	border-bottom:1px solid #f8f8f8;
+	border-bottom:1px solid var(--white);
 }
 
 .menu-footer ul:last-child{
@@ -176,14 +174,15 @@ body > footer{
 	display: grid;
 	place-items: center;
 	height: 100%;
-	color: #f8f8f8;
-	font-size: 1.1em;
+	color: var(--white);
+	font-size: 1.13em;
+	font-family: Roboto-Hamburgabana-Menus;
 }
 
 .menu-footer ul li:hover a{
-	color: #33acf1e1;
+	color: var(--celeste);
 }
 
 .menu-footer ul.menu-abajo li:hover a{
-	color: #128bd0e1;
+	color: var(--celeste);
 }
