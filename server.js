@@ -39,7 +39,7 @@ const server = http.createServer((request, response)=>{
 	});
 });
 
-server.listen(0,()=>{
+server.listen(8080,()=>{
 	console.log(`Server is running on http://localhost:${server.address().port}`);
 });
 
