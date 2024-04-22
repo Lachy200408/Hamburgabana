@@ -80,7 +80,7 @@ body > header{
 	translate: -50% 0;
 	width: min(320px, 95vw);
 	height: min(320px, 95vw);
-	background: url('./design/Hamburguesa_branding.png') no-repeat;
+	background: url('./design/Hamburguesa_branding.webp') no-repeat;
 	background-size: contain;
 	z-index: 10;
 }
@@ -134,7 +134,7 @@ body > header{
 }
 
 body > footer{
-	background: url('./design/footer-background-3.png') no-repeat;
+	background: url('./design/footer-background-3.webp') no-repeat;
 	background-size: cover;
 	box-shadow: inset 0 0 25px var(--shadow-2);
 	min-height: 256px;
@@ -146,7 +146,7 @@ body > footer{
 }
 
 .logotipo-footer{
-	background: url('./design/logotipo-footer-2.png') no-repeat;
+	background: url('./design/logotipo-footer-2.webp') no-repeat;
 	background-size: cover;
 	filter: drop-shadow(0 0 10px var(--shadow-2));
 	width: 512px;
