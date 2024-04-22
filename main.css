@@ -30,7 +30,7 @@ main > section{
 }
 
 .landing-top > figure{
-	background: url('./design/primer-poster-landing.png') no-repeat;
+	background: url('./design/primer-poster-landing.webp') no-repeat;
 	background-size: contain;
 	background-position: center;
 	flex-grow: 3;
@@ -118,7 +118,7 @@ main > section{
 }
 
 .landing-papas > figure{
-	background: url('./design/landing-papas-6.png') no-repeat, url('./design/landing-papas-5.png') no-repeat;
+	background: url('./design/landing-papas-6.webp') no-repeat, url('./design/landing-papas-5.webp') no-repeat;
 	background-size: contain;
 	background-position: center;
 	filter: drop-shadow(0 0 10px var(--shadow-1));
@@ -141,7 +141,7 @@ main > section{
 	height: 600px;
 	border-radius: 32px;
 	box-shadow: 0 0 15px var(--shadow-2), inset 0 0 64px var(--shadow-1);
-	background: url('./design/landing-end-2.png') no-repeat;
+	background: url('./design/landing-end-2.webp') no-repeat;
 	background-size: cover;
 	background-position: center;
 	display: flex;
