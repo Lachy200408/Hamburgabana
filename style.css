@@ -68,9 +68,10 @@ body > header{
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 128px;
-	box-shadow: 0 10px 15px -15px var(--shadow-1);
+	min-height: 128px;
+	box-shadow: 0 20px 25px -25px var(--shadow-1);
 	z-index: 5;
+	background-color: var(--white);
 }
 
 .logotipo{
@@ -79,36 +80,32 @@ body > header{
 	left: 50%;
 	translate: -50% 0;
 	width: min(320px, 95vw);
-	height: min(320px, 95vw);
-	background: url('./design/Hamburguesa_branding.webp') no-repeat;
-	background-size: contain;
 	z-index: 10;
 }
 
-.menu-principal{
-	padding-inline: 32px;
-	background-color: var(--white);
+.logotipo>img{
+	width: 100%;
+	height: auto;
 }
 
 .menu-principal, .menu-principal>*{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	gap: 64px;
-	height: 100%;
+	height: 128px;
 }
 
 .menu-principal ul :where(li, li a){
 	display: grid;
 	place-items: center;
-	height: 100%;
 	width: 200px;
+	height: 100%;
 	font-size: 1.13em;
 	font-family: Roboto-Hamburgabana-Menus;
 }
 
 .menu-principal ul li:hover{
-	box-shadow: inset 0 -20px 30px -35px var(--celeste);
+	box-shadow: inset 0 -30px 30px -35px var(--celeste);
 	color: var(--celeste);
 	border-bottom-width: 3px;
 }
@@ -185,4 +182,68 @@ body > footer{
 
 .menu-footer ul.menu-abajo li:hover a{
 	color: var(--celeste);
+}
+
+@media only screen and (max-width: 1140px){
+	.menu-principal>ul{
+		align-items: flex-start;
+		justify-content: stretch;
+		flex-direction: column;
+		width: 256px;
+	}
+
+	.menu-principal ul :where(li, li a){
+		width: 100%;
+	}
+
+	.menu-principal .menu-izquierda li:hover{
+		box-shadow: inset 30px 0 30px -35px var(--celeste);
+		color: var(--celeste);
+		border-bottom-width: 3px;
+	}
+
+	.menu-principal .menu-derecha li:hover{
+		box-shadow: inset -30px 0 30px -35px var(--celeste);
+		color: var(--celeste);
+		border-bottom-width: 3px;
+	}
+	body>footer{
+		flex-direction: column-reverse;
+	}
+	.logotipo-footer{
+		align-self: flex-start;
+	}
+	.menu-footer{
+		align-self: flex-end;
+	}
+}
+
+@media only screen and (max-width: 856px){
+	.logotipo{
+		position: relative;
+		width: min(192px, 95vw);
+	}
+	.menu-principal{
+		height: max-content;
+	}
+	.menu-principal>ul{
+		align-items: center;
+		justify-content: space-around;
+		flex-direction: row;
+		width: 50%;
+		height: max-content;
+	}
+	.menu-principal ul :where(li, li a){
+		width: max-content;
+		height: 100%;
+		font-size: calc(20px - (856px - 100vw) / 72);
+	}
+	.menu-principal ul li a{
+		padding: 8px;
+	}
+	.menu-principal :is(.menu-izquierda, .menu-derecha) li:hover{
+		box-shadow: inset 0 -15px 30px -35px var(--celeste);
+		color: var(--celeste);
+		border-bottom-width: 3px;
+	}
 }

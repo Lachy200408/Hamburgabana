@@ -50,16 +50,22 @@ main > section{
 	text-shadow: 0 0 3px var(--shadow-1);
 }
 
-.landing-products > ul{
-	display: flex;
-	align-items: center;
-	justify-content: start;
-	gap: 72px;
+.landing-products > article{
 	width: min(1200px, 100%);
 	overflow: hidden;
 }
 
-.landing-products > ul .card{
+.landing-products > article > ul{
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 72px;
+	width: max-content;
+	position: relative;
+	animation: desplazamiento 60s linear 0s infinite both;
+}
+
+.landing-products > article > ul .card{
 	position: relative;
 	height: 384px;
 	flex: 0 0 320px;
@@ -68,20 +74,19 @@ main > section{
 	border: 1px solid rgba(240, 240, 240, .5);
 	box-shadow: 0 0 5px var(--shadow-1);
 	overflow: hidden;
-	animation: desplazamiento-li 65s linear 0s infinite;
 }
 
-.landing-products > ul .card img{
+.landing-products > article > ul .card img{
 	display: block;
 	width: 100%;
 	height: auto;
 }
 
-.landing-products > ul .card:hover img{
+.landing-products > article > ul .card:hover img{
 	transform: scale(1.05);
 }
 
-.landing-products > ul .card figcaption{
+.landing-products > article > ul .card figcaption{
 	position: absolute;
 	bottom: 0;
 	width: 100%;
@@ -91,28 +96,28 @@ main > section{
 	box-shadow: inset 0 0 5px var(--shadow-1);
 }
 
-.landing-products > ul .card figcaption p{
+.landing-products > article > ul .card figcaption p{
 	font-size: 0.85em;
 }
 
-.landing-products > ul .card figcaption h4{
+.landing-products > article > ul .card figcaption h4{
 	text-align: center;
 	margin-bottom: 4px;
 	box-shadow: none;
 }
 
-@keyframes desplazamiento-li {
-	0%, 100%{
+@keyframes desplazamiento {
+	0%{
 		left: 0;
 	}
-	5%{
+	1.5%{
 		left: 0;
 	}
-	50%{
-		left: calc((-320px * 2) - 192px);
+	98.5%{
+		left: calc(-320px*5 - 72px*5);
 	}
-	55%{
-		left: calc((-320px * 2) - 192px);
+	100%{
+		left: calc(-320px*5 - 72px*5);
 	}
 }
 
@@ -187,6 +192,15 @@ main > section{
 	}
 }
 
+@media only screen and (max-width: 856px){
+	main{
+		padding-top: 0;
+	}
+	.landing-top>p, .landing-top em{
+		font-size: calc(20px - (856px - 100vw) / 86);
+	}
+}
+
 @media only screen and (max-width: 415px){
 	:is(.landing-products, .landing-papas)>h1{
 		font-size: calc(47px - ((415px - 100vw) / 24));/* 47 px  calc(47px - ((415px - 100vw) / 94))*/
@@ -196,5 +210,22 @@ main > section{
 	}
 	.landing-end > figure a{
 		font-size: 1.4em;
+	}
+	.landing-products > article > ul .card:hover img{
+		transform: none;
+	}
+	.landing-end > figure a:hover{
+		color: var(--white);
+		border-color: var(--white);
+		animation: touched .6s linear 0s;
+	}
+}
+
+@keyframes touched{
+	0%, 100%{
+	}
+	70%{
+		color: var(--celeste-3);
+		border-color: var(--celeste-3);
 	}
 }
