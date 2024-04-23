@@ -179,6 +179,12 @@ main > section{
 	main>section{
 		height: max-content;
 	}
+	.landing-top>p{
+		padding-inline: 10vw;
+	}
+	.landing-papas>h1{
+		text-align: center;
+	}
 }
 
 @media only screen and (max-width: 415px){
