@@ -1,7 +1,9 @@
 const footer = document.createElement('footer');
 
 footer.innerHTML = `
-	<figure class="logotipo-footer"></figure>
+	<figure class="logotipo-footer">
+		<img src="./design/logotipo-footer-2.webp" alt="Logotipo footer"/>
+	</figure>
 	<nav class="menu-footer">
 		<ul class="menu-arriba">
 			<li><a href="tel:+53299466">Contáctanos</a></li>
