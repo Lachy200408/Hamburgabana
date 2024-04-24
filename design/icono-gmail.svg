@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-df4dfb31-aa3b-41a5-a758-b748b0576630" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 42.7">
+  <defs>
+    <style>
+      .uuid-9262d3dc-c66b-4db6-9d5a-984d10fc3099 {
+        fill: #1e88e5;
+      }
+
+      .uuid-9262d3dc-c66b-4db6-9d5a-984d10fc3099, .uuid-7c8040ac-c85b-4a40-88ed-a02029bb828e, .uuid-f0cddc78-ed74-4de8-a026-5ee4a4ca3010, .uuid-37ad06a2-5b03-472e-8193-ef3dfe44aa84, .uuid-e1ec0dc4-c43c-42a2-a448-81ef9fabf1a3 {
+        stroke-width: 0px;
+      }
+
+      .uuid-7c8040ac-c85b-4a40-88ed-a02029bb828e {
+        fill: #fbc02d;
+      }
+
+      .uuid-f0cddc78-ed74-4de8-a026-5ee4a4ca3010 {
+        fill: #4caf50;
+      }
+
+      .uuid-37ad06a2-5b03-472e-8193-ef3dfe44aa84 {
+        fill: #e53935;
+      }
+
+      .uuid-e1ec0dc4-c43c-42a2-a448-81ef9fabf1a3 {
+        fill: #c62828;
+      }
+    </style>
+  </defs>
+  <path class="uuid-f0cddc78-ed74-4de8-a026-5ee4a4ca3010" d="m56,10.93l-13.36,9.96v21.74h9.35c2.19,0,4.01-1.76,4.01-4.01V10.93Z"/>
+  <path class="uuid-9262d3dc-c66b-4db6-9d5a-984d10fc3099" d="m0,10.93l13.3,10.02v21.74H4.01c-2.19,0-4.01-1.76-4.01-4.01V10.93Z"/>
+  <polygon class="uuid-37ad06a2-5b03-472e-8193-ef3dfe44aa84" points="42.64 4.25 28 15.25 13.36 4.25 13.36 20.89 28 31.89 42.64 20.89 42.64 4.25"/>
+  <path class="uuid-e1ec0dc4-c43c-42a2-a448-81ef9fabf1a3" d="m0,5.71v5.22l13.3,10.02V4.25l-4.13-3.1c-.97-.73-2.19-1.15-3.46-1.15h0C2.55,0,0,2.55,0,5.71Z"/>
+  <path class="uuid-7c8040ac-c85b-4a40-88ed-a02029bb828e" d="m56,5.71v5.22l-13.36,9.96V4.25l4.19-3.1C47.8.43,49.02,0,50.29,0h0C53.45,0,56,2.55,56,5.71Z"/>
+</svg>

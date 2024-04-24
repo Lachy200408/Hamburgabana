@@ -18,7 +18,7 @@ const server = http.createServer((request, response)=>{
 		'.png' : 'image/png',
 		'.jpg' : 'image/jpg',
 		'.webp' : 'image/webp',
-		'.svg' : 'image/svg',
+		'.svg' : 'image/svg+xml',
 		'.gif' : 'image/gif'
 	}[extName] || 'applications/octet-stream';
 

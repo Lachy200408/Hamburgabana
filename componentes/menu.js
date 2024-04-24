@@ -23,8 +23,8 @@ window.addEventListener("load", () => {
 	const arrayItems = document.querySelectorAll(".menu-principal ul li");
 	let arrayPatron = [];
 
-	if (localStorage.length == 0) arrayPatron = ["1", "0", "0", "0"];
-	else arrayPatron = String(localStorage.getItem("patron")).split("");
+	if (sessionStorage.length == 0) arrayPatron = ["1", "0", "0", "0"];
+	else arrayPatron = String(sessionStorage.getItem("patron")).split("");
 
 	arrayItems.forEach((list, index) => {
 		list.className = arrayPatron[index] === "1" ? "active" : "";
@@ -38,7 +38,7 @@ window.addEventListener("load", () => {
 				}
 			});
 
-			localStorage.setItem("patron", arrayPatron.join(""));
+			sessionStorage.setItem("patron", arrayPatron.join(""));
 		}, false);
 	});
 }, false);
