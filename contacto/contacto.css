@@ -37,6 +37,10 @@ main>section>article>a{
 	color: var(--celeste) !important;
 }
 
+main>section>:where(.tel-fijo, .tel-whatsapp)>a{
+	font-size: calc(1em - (1200px - 100vw) / 256) !important;
+}
+
 main>section>article h1{
 	width: 100%;
 	font-size: calc(1.6em - (1200px - 100vw) / 64);

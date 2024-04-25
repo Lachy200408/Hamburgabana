@@ -196,7 +196,7 @@ main > section{
 	main{
 		padding-top: 0;
 	}
-	.landing-top>p, .landing-top em{
+	.landing-top>p, .landing-top :where(a, em){
 		font-size: calc(20px - (856px - 100vw) / 86);
 	}
 }
