@@ -1,0 +1,43 @@
+main{
+	display: flex;
+	flex-direction: column;
+	gap: 128px;
+	padding-block: 128px;
+}
+
+.about-top>figure{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.about-top>figure>img:nth-child(2n+1){
+	width: 29%;
+	filter: drop-shadow(0 0 5px var(--shadow-1));
+}
+
+.about-top>figure>img:nth-child(2){
+	width: 40%;
+	filter: drop-shadow(0 0 10px var(--shadow-1));
+}
+
+.about-history{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	column-gap: 92px;
+	row-gap: 32px;
+	padding-inline: 5vw;
+}
+
+.about-history>h1{
+	font-size: calc(3em - (1200px - 100vw) / 92);
+	color: var(--celeste);
+	width: max-content;
+}
+
+.about-history>p{
+	width: min(600px, 100%);
+}

@@ -7,7 +7,7 @@ header.innerHTML = `
 	</figure>
 	<nav class="menu-principal">
 		<ul class="menu-izquierda">
-			<li class="active"><a href="/">Inicio</a></li>
+			<li><a href="/">Inicio</a></li>
 			<li><a href="/about">¿Quiénes somos?</a></li>
 		</ul>
 		<ul class="menu-derecha">
@@ -21,24 +21,20 @@ document.body.prepend(header);
 
 window.addEventListener("load", () => {
 	const arrayItems = document.querySelectorAll(".menu-principal ul li");
-	let arrayPatron = [];
-
-	if (sessionStorage.length == 0) arrayPatron = ["1", "0", "0", "0"];
-	else arrayPatron = String(sessionStorage.getItem("patron")).split("");
-
-	arrayItems.forEach((list, index) => {
-		list.className = arrayPatron[index] === "1" ? "active" : "";
-
-		list.addEventListener("click", (event) => {
-			arrayItems.forEach((list, index) => {
-				if (event.target.parentElement.innerHTML == list.innerHTML) {
-					arrayPatron[index] = "1";
-				} else {
-					arrayPatron[index] = "0";
-				}
-			});
-
-			sessionStorage.setItem("patron", arrayPatron.join(""));
-		}, false);
-	});
+	const titulo = document.title.slice(0, document.title.indexOf(' '));
+	
+	switch (titulo) {
+		case 'Contáctanos':
+			arrayItems[2].className = 'active';
+			break;
+		case 'Menús':
+			arrayItems[3].className = 'active';
+			break;
+		case '¿Quiénes':
+			arrayItems[1].className = 'active';
+			break;
+		default:
+			arrayItems[0].className = 'active';
+			break;
+	}
 }, false);

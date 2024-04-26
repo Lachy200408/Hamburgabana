@@ -5,9 +5,85 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>¿Quiénes somos? | Hamburgabana</title>
 	<script src="/componentes/loadHead.js"></script>
+	<link rel="stylesheet" href="/about/about.css">
 </head>
 <body>
 	<script src="/componentes/menu.js"></script>
+	<main>
+		<section class="about-top">
+			<figure>
+				<img src="/design/top-left-about.svg" alt="figurita">
+				<img src="/design/top-about.webp" alt="top-about">
+				<img src="/design/top-right-about.svg" alt="figurita">
+			</figure>
+		</section>
+		<section class="about-history">
+			<h1></h1>
+			<script>
+				const parrafo = document.querySelector('.about-history>h1');
+				const arrayNums = new Array(10).fill('').map((_, index) => `${index}`);
+				const fecha = '16/3/2008';
+				let estaVisible = false;
+
+				function animarFecha(){
+					let time = 0;
+					let preFecha = new Array(9).fill('');
+					let intervalo = setInterval(()=>{
+						preFecha.forEach((value, index)=>{
+							if(index!==2 && index!==4){
+								preFecha[index] = arrayNums[Math.floor(Math.random()*10)];
+							}
+							else{
+								preFecha[index] = '/';
+							}
+						});
+
+						parrafo.innerHTML=preFecha.join('');
+						time+=250;
+						if(time>=1500){
+							clearInterval(intervalo);
+							parrafo.innerHTML=fecha;
+						}
+					}, 250);
+				}
+
+				function esVisible(element){
+					const height = window.innerHeight;
+
+					if(element.getBoundingClientRect().top>=0 && element.getBoundingClientRect().bottom<=height){
+						return true;
+					}
+					else{
+						return false;
+					}
+				}
+
+				window.onload=function(){
+					if(esVisible(parrafo)){
+						animarFecha();
+						estaVisible=true;
+					}
+				}
+
+				window.addEventListener('scrollend', ()=>{
+					if(esVisible(parrafo)){
+						if(!estaVisible)
+							animarFecha();
+						estaVisible=true;
+					}
+					else{
+						estaVisible=false
+					}
+				}, false);
+			</script>
+			<p>
+				Esta empresa fue fundada el 16 de marzo del 2008, en el Vedado, Habana.
+				Fue un pequeño negocio familiar durante los primeros años, con poco rendimiento anual.
+				Hemos crecido a base de perseverancia y sudor, gracias al profesionalismo de
+				nuestros empleados y el buen trato a los clientes.
+			</p>
+		</section>
+	</main>
 	<script src="/componentes/footer.js"></script>
 </body>
 </html>

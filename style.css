@@ -38,12 +38,17 @@
 
 html, body{
 	min-height: 100vh;
-	height: max-content;
 	background-color: var(--white);
 }
 
 body{
+	display: flex;
+	flex-direction: column;
 	overflow-y: scroll;
+}
+
+main{
+	flex-grow: 1;
 }
 
 a, a:link, a:visited{
