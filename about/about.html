@@ -39,18 +39,18 @@
 						});
 
 						parrafo.innerHTML=preFecha.join('');
-						time+=250;
-						if(time>=1500){
+						time+=100;
+						if(time>=800){
 							clearInterval(intervalo);
 							parrafo.innerHTML=fecha;
 						}
-					}, 250);
+					}, 100);
 				}
 
 				function esVisible(element){
 					const height = window.innerHeight;
 
-					if(element.getBoundingClientRect().top>=0 && element.getBoundingClientRect().bottom<=height){
+					if(element.getBoundingClientRect().bottom>=0 && element.getBoundingClientRect().top<=height){
 						return true;
 					}
 					else{
@@ -97,7 +97,63 @@
 			</p>
 		</section>
 		<section class="about-datos">
-			
+			<article class="datos-chef">
+				<figure>
+					<h1>100+</h1>
+					<img src="/design/chef.svg" alt="chef">
+				</figure>
+				<p>
+					Más de cien cocineros profesionales ocupan nuestras cocinas,
+					promovemos cada año eventos de investigación e innovación
+					culinaria que permiten desarrollar la cultura de nuestra empresa
+					y acercar a los clientes a la familia.
+				</p>
+			</article>
+			<article class="datos-ingresos">
+				<figure>
+					<h1>23K+</h1>
+					<img src="/design/money.svg" alt="money">
+				</figure>
+				<p>
+					El promedio de ingresos netos después de impuestos de los últimos
+					años ha sido de más de veinte mil dólares anuales, entre los restaurantes,
+					distribuciones, publicidades y servicios menores.
+				</p>
+			</article>
+			<article class="datos-restaurantes">
+				<figure>
+					<h1>17</h1>
+					<img src="/design/icono-shop.svg" alt="restaurantes">
+				</figure>
+				<p>
+					Tenemos abiertos un total de diecisite locales entre restaurantes,
+					cafeterías y paladares por toda la isla. En la Habana puede encontrar
+					un sitio de Hamburgabana casi en cada municipio. El establecimiento
+					más famoso se encuentra en el Vedado, en las calles G y 25.
+				</p>
+			</article>
+		</section>
+		<section class="about-end">
+			<figure>
+				<p>
+					Tenemos una gran flota de 50 autos y 37 motos listas
+					para llevar el pedido lo más rápido posible a los
+					domicilios de los clientes.
+				</p>
+			</figure>
+			<figure>
+				<p>
+					Contamos con redes sociales de alta magnitud y alcance
+					con millones de seguidores por todo el mundo, únetenos.
+				</p>
+			</figure>
+			<figure>
+				<p>
+					Estamos abriendo restaurantes en Barcelona, Madrid, Roma, Quito,
+					New York, Miami, Bogotá, Cuidad de México. La expansión es una
+					tarea difícil pero apasionante. Sé parte de esto.
+				</p>
+			</figure>
 		</section>
 	</main>
 	<script src="/componentes/footer.js"></script>
