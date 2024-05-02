@@ -33,6 +33,7 @@ h1{
 	column-gap: 8%;
 	row-gap: 32px;
 	padding-inline: min(64px, 5vw);
+	justify-content: center;
 }
 
 .about-history>h1{
