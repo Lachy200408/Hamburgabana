@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-a6c0f0a7-a1e9-4344-b038-165ad12b7b6b" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 164.16 164.16">
+  <defs>
+    <style>
+      .uuid-89c6978d-640b-4bc0-acbc-cef5e117cfe1 {
+        stroke-width: 12.16px;
+      }
+
+      .uuid-89c6978d-640b-4bc0-acbc-cef5e117cfe1, .uuid-249b77d6-a488-4a1e-a724-d5a1fababe56 {
+        fill: none;
+        stroke: #f8f8f8;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+      }
+
+      .uuid-249b77d6-a488-4a1e-a724-d5a1fababe56 {
+        stroke-width: 14px;
+      }
+    </style>
+  </defs>
+  <path class="uuid-249b77d6-a488-4a1e-a724-d5a1fababe56" d="m109.08,48.08l-54.12,32.77c-.69.67-.69,1.79,0,2.46l54.12,32.77"/>
+  <circle class="uuid-89c6978d-640b-4bc0-acbc-cef5e117cfe1" cx="82.08" cy="82.08" r="76"/>
+</svg>

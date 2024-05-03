@@ -2,7 +2,7 @@ main{
 	display: flex;
 	flex-direction: column;
 	gap: clamp(64px, 10vw, 128px);
-	padding-block: 10vw;
+	padding-block: min(92px, 10vw);
 }
 
 h1{
@@ -13,18 +13,13 @@ h1{
 .about-top>figure{
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: center;
 	width: 100%;
 }
 
-.about-top>figure>img:nth-child(2n+1){
-	width: 29%;
-	filter: drop-shadow(0 0 5px var(--shadow-1));
-}
-
-.about-top>figure>img:nth-child(2){
-	width: 40%;
-	filter: drop-shadow(0 0 10px var(--shadow-1));
+.about-top>figure>img{
+	width: min(600px, 95%);
+	height: auto;
 }
 
 .about-history{
@@ -137,20 +132,20 @@ h1{
 
 .about-end figure:first-child{
 	width: min(500px, 100%);
-	background-color: #77ac00;
-	box-shadow: inset 0 0 50px #f8f8f8, 0 200px 100px -150px #77ac00;
+	background-color: var(--celeste);
+	box-shadow: inset 0 0 50px #f8f8f8, 0 200px 100px -150px var(--celeste);
 }
 
 .about-end figure:nth-child(2){
 	justify-self: end;
 	width: min(450px, 95%);
-	background-color: #df1006;
-	box-shadow: inset 0 0 50px #f8f8f8, 0 200px 100px -150px #df1006;
+	background-color: var(--celeste-2);
+	box-shadow: inset 0 0 50px #f8f8f8, 0 200px 100px -150px var(--celeste-2);
 }
 
 .about-end figure:last-child{
 	justify-self: center;
 	width: min(400px, 90%);
-	background-color: #f2ba05;
-	box-shadow: inset 0 0 50px #f8f8f8, 0 200px 100px -150px #f2ba05;
+	background-color: var(--celeste-3);
+	box-shadow: inset 0 0 50px #f8f8f8, 0 200px 100px -150px var(--celeste-3);
 }

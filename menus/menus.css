@@ -1,11 +1,16 @@
 main{
+	padding-bottom: 92px;
+}
+
+.primary-menu-body{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
 	gap: 64px;
 	width: 100%;
-	padding: min(128px, 10vw) min(64px, 5vw);
+	min-height: 100%;
+	padding: min(128px, 10vw) min(64px, 5vw) 0;
 }
 
 .primary-menu-card h1{
@@ -23,8 +28,8 @@ main{
 
 .primary-menu-card{
 	position: relative;
-	height: 384px;
-	flex: 0 0 320px;
+	height: min(384px, 110vw);
+	flex: 0 1 320px;
 	border-radius: 32px;
 	border: 1px solid rgba(240, 240, 240, .5);
 	box-shadow: 0 0 5px var(--shadow-1);
@@ -52,4 +57,118 @@ main{
 	.primary-menu-card:hover img{
 		transform: none;
 	}
+}
+
+/* *A partir de aqui siguen los estilos de los menus especificos */
+
+header>h1{
+	padding-block: min(128px, 10vw) 32px;
+	font-size: calc(5em - calc(2304px - 100vw) / 32);
+	text-transform: capitalize;
+	text-align: center;
+	color: var(--celeste);
+}
+
+.specific-menu-body{
+	width: min(2048px, 98%);
+	padding: 32px min(92px, 2vw);
+	margin-inline: auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, min(600px, 100%));
+	justify-content: space-around;
+	row-gap: 64px;
+}
+
+.specific-menu-body>article{
+	overflow: hidden;
+	border: 1px solid var(--shadow-1);
+	border-radius: min(32px, 5vw);
+	box-shadow: 0 0 16px var(--shadow-1);
+	width: min(500px, 100%);
+	margin-inline: auto;
+	padding-inline: 4%;
+}
+
+.specific-menu-body>article>*:nth-child(n+2){
+	width: 75%;
+	margin-inline: auto;
+	margin-bottom: 16px;
+}
+
+.specific-menu-body>article>h1{
+	font-size: calc(2em - calc(2304px - 100vw) / 128);
+	color: var(--celeste-2);
+	text-align: center;
+	padding-block: 4px 2px;
+	margin-bottom: 16px;
+	box-shadow: 0 8px 4px -8px var(--shadow-2);
+}
+
+.specific-menu-body>article>img{
+	display: block;
+	height: auto;
+	aspect-ratio: 1 / 1;
+	border-radius: 8px;
+	box-shadow: 0 0 8px var(--shadow-1);
+}
+
+.specific-menu-body>article>p{
+	text-wrap: pretty;
+	font-size: calc(1em - (1200px - 100vw) / 256);
+}
+
+.specific-menu-body>article>figure{
+	display: flex;
+	gap: 8px;
+}
+
+.specific-menu-body>article>figure>img{
+	width: calc(100% / 10);
+	height: auto;
+}
+
+.specific-menu-body>article>span{
+	display: block;
+	text-align: end;
+}
+
+.specific-menu-body>article>span::before{
+	content: '$';
+}
+
+.specific-menu-body>article>span::after{
+	content: '.00';
+}
+
+/* *Estilos del boton de retorno */
+
+main>button{
+	position: fixed;
+	top: 25vh;
+	left: 4px;
+	background-color: var(--celeste);
+	border-radius: 50%;
+	box-shadow: 0 0 8px var(--celeste);
+	width: min(64px, 15vw);
+	height: min(64px, 15vw);
+	outline: none;
+	border: none;
+	transition: transform .2s linear 0s, box-shadow .2s linear 0s;
+	display: grid;
+	place-items: center;
+}
+
+main>button:hover{
+	transform: scale(1.05);
+	box-shadow: none;
+}
+
+main>button:active{
+	transform: scale(0.98);
+	box-shadow: 0 0 16px var(--celeste);
+}
+
+main>button>img{
+	max-width: 90%;
+	height: auto;
 }
