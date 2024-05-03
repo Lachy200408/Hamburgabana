@@ -3,7 +3,7 @@ const main = document.querySelector('main')
 window.addEventListener('load', loadPrimaryMenu, false)
 
 function loadPrimaryMenu () {
-	main.innerHTML = ''
+	main.innerHTML = '<h1>Cargando...</h1>'
 
 	fetch('https://api-hamburgabana.onrender.com/menu/kinds')
 	.then(result => result.json())
