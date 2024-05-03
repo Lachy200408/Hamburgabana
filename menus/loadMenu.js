@@ -5,7 +5,7 @@ window.addEventListener('load', loadPrimaryMenu, false)
 function loadPrimaryMenu () {
 	main.innerHTML = ''
 
-	fetch('https://apihamburgabana-production.up.railway.app/menu/kinds')
+	fetch('https://api-hamburgabana.onrender.com/menu/kinds')
 	.then(result => result.json())
 	.then(highLevelMenu => {
 		//* Cuando tomo los datos del json los escribo en html
@@ -31,7 +31,7 @@ function primaryMenuCardHandler (event) {
 	const cardTextKind = event.target.parentElement.firstElementChild.innerHTML
 	main.innerHTML = ''
 
-	fetch('https://apihamburgabana-production.up.railway.app/menu/'+cardTextKind)
+	fetch('https://api-hamburgabana.onrender.com/menu/'+cardTextKind)
 	.then(result => result.json())
 	.then(specificMenu => {
 		const specificMenuHtml = specificMenu.products.sort((a,b) => a.rate - b.rate).map(platillo => {
