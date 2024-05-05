@@ -87,6 +87,9 @@ header>h1{
 	width: min(500px, 100%);
 	margin-inline: auto;
 	padding-inline: 4%;
+	display: grid;
+	grid-template-rows: auto 1fr auto auto auto;
+	align-content: space-around;
 }
 
 .specific-menu-body>article>*:nth-child(n+2){
@@ -109,6 +112,7 @@ header>h1{
 	height: auto;
 	border-radius: 8px;
 	box-shadow: 0 0 8px var(--shadow-1);
+	align-self: center;
 }
 
 .specific-menu-body>article>p{
