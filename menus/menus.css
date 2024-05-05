@@ -107,7 +107,6 @@ header>h1{
 .specific-menu-body>article>img{
 	display: block;
 	height: auto;
-	aspect-ratio: 1 / 1;
 	border-radius: 8px;
 	box-shadow: 0 0 8px var(--shadow-1);
 }
