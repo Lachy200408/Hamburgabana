@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<lastmod>2024-05-15</lastmod>
+		<loc>http://hamburgabana.onrender.com/</loc>
+		<priority>1.0</priority>
+	</url>
+	<url>
+		<lastmod>2024-05-15</lastmod>
+		<loc>http://hamburgabana.onrender.com/about/about.html</loc>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<lastmod>2024-05-15</lastmod>
+		<loc>http://hamburgabana.onrender.com/contacto/contacto.html</loc>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<lastmod>2024-05-15</lastmod>
+		<loc>http://hamburgabana.onrender.com/menus/menus.html</loc>
+		<priority>0.8</priority>
+	</url>
+</urlset>

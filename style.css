@@ -1,16 +1,16 @@
 @font-face {
 	font-family: Roboto-Hamburgabana-Menus;
-	src: url('./tipografias/roboto/Roboto-Light.ttf');
+	src: url('./tipografias/roboto/Roboto-Light.woff2') format('woff2');
 }
 
 @font-face {
 	font-family: Roboto-Hamburgabana-Parrafo;
-	src: url('./tipografias/roboto/Roboto-Regular.ttf');
+	src: url('./tipografias/roboto/Roboto-Regular.woff2') format('woff2');
 }
 
 @font-face {
 	font-family: Roboto-Hamburgabana-Titulo;
-	src: url('./tipografias/roboto/Roboto-Black.ttf');
+	src: url('./tipografias/roboto/Roboto-Black.woff2') format('woff2');
 }
 
 :root{

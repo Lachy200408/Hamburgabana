@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>¿Quiénes somos? | Hamburgabana</title>
-	<script src="/componentes/loadHead.js"></script>
+	<script src="/componentes/loadHead.js" async></script>
 	<link rel="stylesheet" href="/about/about.css">
 	
 	<meta name="robots" content="index, follow">
@@ -20,7 +20,7 @@
 	<link rel="canonical" href="http://hamburgabana.onrender.com">
 </head>
 <body>
-	<script src="/componentes/menu.js"></script>
+	<script src="/componentes/menu.js" async></script>
 	<main>
 		<section class="about-top">
 			<figure>
@@ -28,64 +28,7 @@
 			</figure>
 		</section>
 		<section class="about-history">
-			<h1></h1>
-			<script>
-				const parrafo = document.querySelector('.about-history>h1');
-				const arrayNums = new Array(10).fill('').map((_, index) => `${index}`);
-				const fecha = '16/3/2008';
-				let estaVisible = false;
-
-				function animarFecha(){
-					let time = 0;
-					let preFecha = new Array(9).fill('');
-					let intervalo = setInterval(()=>{
-						preFecha.forEach((value, index)=>{
-							if(index!==2 && index!==4){
-								preFecha[index] = arrayNums[Math.floor(Math.random()*10)];
-							}
-							else{
-								preFecha[index] = '/';
-							}
-						});
-
-						parrafo.innerHTML=preFecha.join('');
-						time+=100;
-						if(time>=800){
-							clearInterval(intervalo);
-							parrafo.innerHTML=fecha;
-						}
-					}, 100);
-				}
-
-				function esVisible(element){
-					const height = window.innerHeight;
-
-					if(element.getBoundingClientRect().bottom>=0 && element.getBoundingClientRect().top<=height){
-						return true;
-					}
-					else{
-						return false;
-					}
-				}
-
-				window.onload=function(){
-					if(esVisible(parrafo)){
-						animarFecha();
-						estaVisible=true;
-					}
-				}
-
-				window.addEventListener('scrollend', ()=>{
-					if(esVisible(parrafo)){
-						if(!estaVisible)
-							animarFecha();
-						estaVisible=true;
-					}
-					else{
-						estaVisible=false
-					}
-				}, false);
-			</script>
+			<h1>16/3/2008</h1>
 			<p>
 				Esta empresa fue fundada el 16 de marzo del 2008, en el Vedado, Habana.
 				Fue un pequeño negocio familiar durante los primeros años, con poco rendimiento anual.
