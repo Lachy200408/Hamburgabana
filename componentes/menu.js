@@ -3,16 +3,16 @@ header.className = "header-principal";
 
 header.innerHTML = `
 	<figure class="logotipo">
-		<img src="./design/Hamburguesa_branding.webp" alt="Logotipo"/>
+		<img src="/design/Hamburguesa_branding.webp" alt="Logotipo"/>
 	</figure>
 	<nav class="menu-principal">
 		<ul class="menu-izquierda">
 			<li><a href="/">Inicio</a></li>
-			<li><a href="/about/">¿Quiénes somos?</a></li>
+			<li><a href="/about/about.html">¿Quiénes somos?</a></li>
 		</ul>
 		<ul class="menu-derecha">
-			<li><a href="/contacto/">Contáctanos</a></li>
-			<li><a href="/menus/">Menú</a></li>
+			<li><a href="/contacto/contacto.html">Contáctanos</a></li>
+			<li><a href="/menus/menus.html">Menú</a></li>
 		</ul>
 	</nav>
 `;
