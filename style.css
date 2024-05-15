@@ -53,7 +53,7 @@ main{
 
 a, a:link, a:visited{
 	text-decoration: none;
-	color: var(--white);
+	color: inherit;
 }
 
 li{

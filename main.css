@@ -187,6 +187,7 @@ main > section{
 .landing-end > figure a{
 	font-size: 2em;
 	transition: color 50ms ease-in 50ms, border-color 50ms ease-out 0s;
+	color: var(--white);
 }
 
 .landing-end > figure a:hover{
