@@ -8,11 +8,11 @@ header.innerHTML = `
 	<nav class="menu-principal">
 		<ul class="menu-izquierda">
 			<li><a href="/">Inicio</a></li>
-			<li><a href="/about.html">¿Quiénes somos?</a></li>
+			<li><a href="/about/">¿Quiénes somos?</a></li>
 		</ul>
 		<ul class="menu-derecha">
-			<li><a href="/contacto.html">Contáctanos</a></li>
-			<li><a href="/menus.html">Menú</a></li>
+			<li><a href="/contacto/">Contáctanos</a></li>
+			<li><a href="/menus/">Menú</a></li>
 		</ul>
 	</nav>
 `;
